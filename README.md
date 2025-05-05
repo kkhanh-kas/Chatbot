@@ -1,16 +1,14 @@
-# UEH E-commerce Program Landing Page
+# UEH E-commerce Program Landing Page with Chatbot
 
-A modern, responsive landing page for UEH's E-commerce Program featuring an integrated AI chatbot assistant. The website is designed to provide information about the e-commerce program at UEH (University of Economics Ho Chi Minh City) in Vietnamese.
+A modern, responsive landing page for UEH's E-commerce Program featuring an integrated chatbot assistant. The website is designed to provide information about the e-commerce program at UEH (University of Economics Ho Chi Minh City).
 
 ## Features
 
-- 🎨 Modern, responsive design using HTML5 and CSS3
-- 🤖 AI-powered chatbot assistant using Dialogflow
-- 🌐 Bilingual support (Vietnamese)
-- 📱 Mobile-friendly interface
-- 🎯 Program highlights and features section
-- 🎓 Educational program information
-- 💼 Career opportunities showcase
+-  Design using HTML5 and CSS3
+-  Chatbot assistant using Dialogflow
+-  Program highlights and features section
+-  Educational program information
+-  Career opportunities showcase
 
 ## Tech Stack
 
@@ -60,7 +58,7 @@ npm install
 
 3. Set up Dialogflow:
 - Create a Dialogflow agent
-- Set up the agent with Vietnamese language support
+- Set up the agent 
 - Configure intents for e-commerce program queries
 - Add your Dialogflow agent ID to the configuration
 
@@ -109,11 +107,3 @@ The chatbot's appearance can be customized through the `df-messenger` element pr
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Contact
-
-For any queries regarding the UEH E-commerce Program, please visit [UEH Website](https://www.ueh.edu.vn/) or contact through the integrated chatbot on the landing page. 
