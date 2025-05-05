@@ -1,0 +1,26 @@
+{
+  "name": "aurora-backend",
+  "version": "1.0.0",
+  "description": "Backend server for Aurora chatbot",
+  "main": "index.ts",
+  "scripts": {
+    "start": "ts-node index.ts",
+    "dev": "nodemon --exec ts-node index.ts --watch './**/*.ts'",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@types/node-fetch": "^2.6.12",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "node-fetch": "^2.6.7"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.11.19",
+    "@types/node-fetch": "^2.6.11",
+    "nodemon": "^3.0.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
