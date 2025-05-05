@@ -30,17 +30,17 @@ const Features: React.FC<FeaturesProps> = ({ language }) => {
       sections: [
         {
           title: "Chương Trình Đào Tạo Tiên Tiến",
-          description: "Kiến thức toàn diện về TMĐT và công nghệ",
+          description: "- Kiến thức toàn diện về TMĐT và công nghệ\n- Thực hành với dự án thực tế\n- Giảng viên là chuyên gia trong ngành",
           icon: FaGraduationCap
         },
         {
           title: "Cơ Hội Nghề Nghiệp",
-          description: "Chuyên viên tại doanh nghiệp TMĐT, Quản trị Marketing số, Khởi nghiệp kinh doanh số",
+          description: "- Chuyên viên tại doanh nghiệp TMĐT\n- Quản trị Marketing số\n- Khởi nghiệp kinh doanh số",
           icon: FaBriefcase
         },
         {
           title: "Đối Tác Doanh Nghiệp",
-          description: "Thực tập tại công ty TMĐT hàng đầu, Cơ hội việc làm sau tốt nghiệp, Mạng lưới cựu sinh viên rộng lớn",
+          description: "- Thực tập tại công ty TMĐT hàng đầu\n- Cơ hội việc làm sau tốt nghiệp\n- Mạng lưới cựu sinh viên rộng lớn",
           icon: FaTools
         }
       ]
@@ -48,24 +48,18 @@ const Features: React.FC<FeaturesProps> = ({ language }) => {
   };
 
   return (
-    <div className="py-24 bg-white dark:bg-gray-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-          {content[language].sections.map((section, index) => (
-            <div key={index} className="text-center">
-              <div className="flex justify-center mb-6">
-                <section.icon className="w-16 h-16 text-[#005f69]" />
-              </div>
-              <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
-                {section.title}
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300">
-                {section.description}
-              </p>
-            </div>
+    <div className="features">
+      {content[language].sections.map((section, index) => (
+        <div key={index} className="feature">
+          <div className="feature-icon">
+            <section.icon />
+          </div>
+          <h3>{section.title}</h3>
+          {section.description.split('\n').map((line, i) => (
+            <p key={i}>{line}</p>
           ))}
         </div>
-      </div>
+      ))}
     </div>
   );
 };
