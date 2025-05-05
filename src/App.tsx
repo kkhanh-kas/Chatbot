@@ -3,8 +3,29 @@ import Hero from './components/Hero';
 import Features from './components/Features';
 import ChatWidget from './components/ChatWidget';
 
+interface DialogflowError extends CustomEvent {
+  detail: {
+    error: any;
+  };
+}
+
 const App: React.FC = () => {
   const [language, setLanguage] = useState<'en' | 'vi'>('en');
+
+  React.useEffect(() => {
+    const dfMessenger = document.querySelector('df-messenger');
+    
+    if (dfMessenger) {
+      dfMessenger.addEventListener('df-messenger-loaded', () => {
+        console.log('Dialogflow messenger loaded successfully');
+      });
+      
+      dfMessenger.addEventListener('df-error', ((event: Event) => {
+        const error = event as DialogflowError;
+        console.error('Dialogflow messenger error:', error.detail.error);
+      }) as EventListener);
+    }
+  }, []);
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900">
