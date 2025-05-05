@@ -2,7 +2,7 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-  base: '/Aurora/',
+  base: '/chatbot/',
   plugins: [react()],
   server: {
     port: 5173,
