@@ -15,6 +15,7 @@ declare global {
         'agent-id'?: string;
         'language-code'?: string;
         'expand'?: string;
+        'placeholder'?: string;
       };
     }
   }
@@ -27,7 +28,8 @@ const ChatWidget: React.FC<ChatWidgetProps> = ({ language }) => {
       intent="WELCOME"
       chat-title="Trợ Lý TMĐT UEH"
       agent-id="80db7ea8-5c14-4ee3-a5f0-7b36a558024c"
-      language-code={language === 'vi' ? 'vi' : 'en'}
+      language-code="vi"
+      placeholder="Hỏi gì đó..."
       expand="true">
     </df-messenger>
   );

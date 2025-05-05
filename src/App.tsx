@@ -10,7 +10,7 @@ interface DialogflowError extends CustomEvent {
 }
 
 const App: React.FC = () => {
-  const [language, setLanguage] = useState<'en' | 'vi'>('vi');
+  const [language] = useState<'en' | 'vi'>('vi');
 
   React.useEffect(() => {
     const dfMessenger = document.querySelector('df-messenger');

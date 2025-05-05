@@ -15,7 +15,7 @@ body {
   color: white;
   padding: 80px 20px;
   text-align: center;
-  min-height: 60vh;
+  min-height: 40vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -41,7 +41,7 @@ body {
 }
 
 .hero h1 {
-  font-size: 3.5em;
+  font-size: 2.8em;
   margin-bottom: 20px;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
@@ -49,34 +49,38 @@ body {
 .hero h2 {
   color: #f26f33;
   font-size: 2em;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
 
 .hero p {
-  font-size: 1.3em;
+  font-size: 1.2em;
   max-width: 800px;
-  margin: 0 auto 30px;
+  margin: 0 auto;
   line-height: 1.6;
 }
 
 .features {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  padding: 60px 20px;
+  padding: 40px 20px;
   max-width: 1200px;
   margin: 0 auto;
-  background: white;
+  background: transparent;
 }
 
 .feature {
   background: white;
   padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
 }
 
 .feature:hover {
@@ -87,14 +91,22 @@ body {
   font-size: 2.5em;
   color: #005f69;
   margin-bottom: 20px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 95, 105, 0.1);
+  border-radius: 50%;
+  padding: 15px;
 }
 
 .feature h3 {
   color: #005f69;
   font-size: 1.5em;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   position: relative;
-  padding-bottom: 10px;
+  padding-bottom: 15px;
 }
 
 .feature h3::after {
@@ -111,7 +123,8 @@ body {
 .feature p {
   color: #444;
   line-height: 1.6;
-  margin: 10px 0;
+  margin: 8px 0;
+  text-align: left;
 }
 
 df-messenger {
@@ -125,11 +138,22 @@ df-messenger {
   --df-messenger-font-color: white;
   --df-messenger-user-message: #f26f33;
   --df-messenger-minimized-chat-close-icon-color: white;
+  --df-messenger-send-icon: #f26f33;
+  --df-messenger-input-placeholder-font-color: #666;
+  --df-messenger-input-box-color: #fff;
+  --df-messenger-input-font-color: #333;
+  --df-messenger-input-border-color: #005f69;
+}
+
+@media (max-width: 1024px) {
+  .features {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
   .hero h1 {
-    font-size: 2.5em;
+    font-size: 2.2em;
   }
   
   .hero h2 {
@@ -142,6 +166,10 @@ df-messenger {
   
   .features {
     grid-template-columns: 1fr;
-    padding: 40px 20px;
+    padding: 30px 20px;
+  }
+
+  .feature {
+    padding: 20px;
   }
 } 
