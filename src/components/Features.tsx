@@ -29,18 +29,18 @@ const Features: React.FC<FeaturesProps> = ({ language }) => {
     vi: {
       sections: [
         {
-          title: "Chương Trình Đào Tạo Toàn Diện",
-          description: "Làm chủ kiến thức cơ bản về TMĐT, marketing số, quản lý chuỗi cung ứng và phân tích dữ liệu thông qua chương trình học gắn liền với ngành.",
+          title: "Chương Trình Đào Tạo Tiên Tiến",
+          description: "Kiến thức toàn diện về TMĐT và công nghệ",
           icon: FaGraduationCap
         },
         {
           title: "Cơ Hội Nghề Nghiệp",
-          description: "Chuẩn bị cho các vị trí quản lý TMĐT, marketing số, phân tích kinh doanh và khởi nghiệp với các dự án thực tế và thực tập.",
+          description: "Chuyên viên tại doanh nghiệp TMĐT, Quản trị Marketing số, Khởi nghiệp kinh doanh số",
           icon: FaBriefcase
         },
         {
-          title: "Kỹ Năng Chuyên Ngành",
-          description: "Phát triển kỹ năng thực tiễn về nền tảng số, công cụ phân tích và chiến lược kinh doanh cần thiết trong thị trường số hiện nay.",
+          title: "Đối Tác Doanh Nghiệp",
+          description: "Thực tập tại công ty TMĐT hàng đầu, Cơ hội việc làm sau tốt nghiệp, Mạng lưới cựu sinh viên rộng lớn",
           icon: FaTools
         }
       ]
